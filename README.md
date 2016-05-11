@@ -2,8 +2,8 @@
 
 NOTE： This is a branch of orginal version 5.1.010 version, following 
 orginal license.  For more details about orginal version, please refer 
-to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads
-its orginal revision list:
+to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads  
+its orginal revision list:  
 https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt
 
 
@@ -13,13 +13,13 @@ INSTRUCTIONS FOR COMPILING THE COMMAND LINE VERSION OF SWMM 5
 
 1. Open the file swmm5.c in a text editor and make sure that the
    compiler directives at the top of the file read as follows:
-       #define CLE
-       //#define SOL
-       //#define DLL
+       #define CLE  
+       //#define SOL  
+       //#define DLL  
        
 2. Under src:
 
-      make
+      make    
       make clean
 
    
