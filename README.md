@@ -1,67 +1,68 @@
-# swmm5
+swmm5
+=====================================================================
 
-NOTE： This is a branch of orginal version 5.1.010 version, following 
-orginal license.  For more details about orginal version, please refer 
-to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads  
-its orginal revision list:  
-https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt
+NOTE： This is a branch of orginal version 5.1.010 version, following 	
+orginal license.  For more details about orginal version, please refer	 
+to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads	  
+its orginal revision list:  	
+https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt	
 
 
 INSTRUCTIONS FOR COMPILING THE COMMAND LINE VERSION OF SWMM 5
             USING THE GNU C/C++ COMPILER ON LINUX
-=====================================================================
-
-1. Open the file swmm5.c in a text editor and make sure that the
-   compiler directives at the top of the file read as follows:
+---------------------------------------------------------------------
+#  Open the file swmm5.c in a text editor and make sure that the	
+   compiler directives at the top of the file read as follows:	
        #define CLE  
        //#define SOL  
        //#define DLL  
        
-2. Under src:
+#  Under src:
 
       make    
       make clean
-
+	  ./swmm5 ../sample/parkinglot.inp ../sample/report.txt ../sample/parkinglot.opt	
+or    ./swmm5 ../sample/parkinglot.inp ../sample/report.txt	  	  
    
    
 
 A Roadmap to the SWMM 5 Engine Source Code
-==========================================
+---------------------------------------------------------------------
 
-The SWMM 5 computational engine consists of 51 C-code files plus several
-header files. The engine can be compiled either as a Dynamic Link Library
-(DLL) under Windows or as a stand-alone console application under both
-Windows and Linux, depending on which of the #define DLL and #define CLE
+The SWMM 5 computational engine consists of 51 C-code files plus several	
+header files. The engine can be compiled either as a Dynamic Link Library	
+(DLL) under Windows or as a stand-alone console application under both	
+Windows and Linux, depending on which of the #define DLL and #define CLE	
 declarations at the top of swmm5.c is commented out.
 
-The following header files contain definitions that are used throughout the
-code and should be consulted if the meaning of a variable, a data structure,
-or a constant is unclear:
+#  The following header files contain definitions that are used throughout the	
+code and should be consulted if the meaning of a variable, a data structure,		
+or a constant is unclear:	
 
-enums.h       defines various enumerated (symbolic) constants.
+enums.h       defines various enumerated (symbolic) constants.	
 
-objects.h     defines the major classes of data objects used by SWMM 5.
+objects.h     defines the major classes of data objects used by SWMM 5.	
 
-consts.h      defines useful numerical constants.
+consts.h      defines useful numerical constants.	
 
-text.h        defines various text strings used throughout the code.
+text.h        defines various text strings used throughout the code.	
 
-macros.h      defines several macros used throughout the code.
+macros.h      defines several macros used throughout the code.	
 
-globals.h     declares global variables that are referenced in many
+globals.h     declares global variables that are referenced in many	
               SWMM 5 code modules.
 
-funcs.h       contains prototypes of functions that can be called from any
+funcs.h       contains prototypes of functions that can be called from any	
               module of SWMM 5 that #includes funcs.h.
 
---------------------------------------------------------------------------
 
-The following modules form the main core of the SWMM 5 engine:
 
-swmm5.c       contains functions that provide supervisory control over the
+#  The following modules form the main core of the SWMM 5 engine:	
+
+swmm5.c       contains functions that provide supervisory control over the	
               program.
 
-project.c     contains functions that create and destroy all project data,
+project.c     contains functions that create and destroy all project data,	
               establish default values, and look up objects by ID name.
 
 input.c       reads a project's data from an input file.
@@ -89,9 +90,9 @@ report.c      prepares a status report of simulation results and, for the
 
 inputrpt.c    writes a summary of a project's input data to the status report.
 
--------------------------------------------------------------------------------
 
-The following collection of modules are used to perform runoff calculations:
+
+#  The following collection of modules are used to perform runoff calculations:
 
 rain.c        places data from external rainfall files into a single rainfall
               interface file.
@@ -123,9 +124,9 @@ lid.c         evaluates the hydrologic performance of Low Impact Development
 
 lidproc.c     computes the hydrologic performance of individual LID units.
 
--------------------------------------------------------------------------------
 
-These modules are used for flow and water quality routing:
+
+#  These modules are used for flow and water quality routing:
 
 flowrout.c     implements top-level control of flow routing through a project's
                drainage network.
@@ -176,9 +177,9 @@ roadway.c      computes flow overtopping a roadway using the FWHA HDS-5
 
 exfil.c        computes exfiltration from beneath storage units.
 
--------------------------------------------------------------------------------
 
-The following modules provide various support functions for SWMM 5:
+
+#  The following modules provide various support functions for SWMM 5:
 
 datetime.c     functions for manipulating dates and times.
 
