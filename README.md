@@ -1,24 +1,23 @@
 swmm5
 =====================================================================
 
-NOTE： This is a branch of orginal version 5.1.010 version, following 	
-orginal license.  For more details about orginal version, please refer	 
-to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads	  
-its orginal revision list:  	
-https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt			
+NOTE： This is a branch of orginal version 5.1.010 version, following
+orginal license.  For more details about orginal version, please refer
+to: https://www.epa.gov/water-research/storm-water-management-model-swmm#downloads 
+its orginal revision list: https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt			
 
 the sample data file parkinglot.inp coming from https://github.com/OpenWaterAnalytics/pyswmm	
 
 INSTRUCTIONS FOR COMPILING THE COMMAND LINE VERSION OF SWMM 5 USING THE GNU C/C++ COMPILER ON LINUX
 ---------------------------------------------------------------------
-#  Open the file swmm5.c in a text editor and make sure that the
+##  Open the file swmm5.c in a text editor and make sure that the
 compiler directives at the top of the file read as follows:	
      
        #define CLE  
        //#define SOL  
        //#define DLL  
        
-#  Under src:
+## Under src:
 
       make    
       make clean
@@ -36,7 +35,7 @@ header files. The engine can be compiled either as a Dynamic Link Library
 Windows and Linux, depending on which of the #define DLL and #define CLE
 declarations at the top of swmm5.c is commented out.
 
-#  The following header files contain definitions that are used throughout the
+##  The following header files contain definitions that are used throughout the
 code and should be consulted if the meaning of a variable, a data structure,
 or a constant is unclear:	
 
@@ -58,7 +57,7 @@ funcs.h       contains prototypes of functions that can be called from any
 
 
 
-#  The following modules form the main core of the SWMM 5 engine:	
+##  The following modules form the main core of the SWMM 5 engine:	
 
 swmm5.c       contains functions that provide supervisory control over the	
               program.
@@ -93,7 +92,7 @@ inputrpt.c    writes a summary of a project's input data to the status report.
 
 
 
-#  The following collection of modules are used to perform runoff calculations:
+##  The following collection of modules are used to perform runoff calculations:
 
 rain.c        places data from external rainfall files into a single rainfall
               interface file.
@@ -127,7 +126,7 @@ lidproc.c     computes the hydrologic performance of individual LID units.
 
 
 
-#  These modules are used for flow and water quality routing:
+##  These modules are used for flow and water quality routing:
 
 flowrout.c     implements top-level control of flow routing through a project's
                drainage network.
@@ -180,7 +179,7 @@ exfil.c        computes exfiltration from beneath storage units.
 
 
 
-#  The following modules provide various support functions for SWMM 5:
+##  The following modules provide various support functions for SWMM 5:
 
 datetime.c     functions for manipulating dates and times.
 
