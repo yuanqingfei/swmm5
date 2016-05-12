@@ -9,11 +9,11 @@ https://www.epa.gov/sites/production/files/2015-08/epaswmm5_updates.txt
 
 the sample data file parkinglot.inp coming from https://github.com/OpenWaterAnalytics/pyswmm	
 
-INSTRUCTIONS FOR COMPILING THE COMMAND LINE VERSION OF SWMM 5
-            USING THE GNU C/C++ COMPILER ON LINUX
+INSTRUCTIONS FOR COMPILING THE COMMAND LINE VERSION OF SWMM 5 USING THE GNU C/C++ COMPILER ON LINUX
 ---------------------------------------------------------------------
-#  Open the file swmm5.c in a text editor and make sure that the	
-   compiler directives at the top of the file read as follows:	
+#  Open the file swmm5.c in a text editor and make sure that the
+compiler directives at the top of the file read as follows:	
+     
        #define CLE  
        //#define SOL  
        //#define DLL  
@@ -30,14 +30,14 @@ or    ./swmm5 ../sample/parkinglot.inp ../sample/report.txt
 A Roadmap to the SWMM 5 Engine Source Code
 ---------------------------------------------------------------------
 
-The SWMM 5 computational engine consists of 51 C-code files plus several	
-header files. The engine can be compiled either as a Dynamic Link Library	
-(DLL) under Windows or as a stand-alone console application under both	
-Windows and Linux, depending on which of the #define DLL and #define CLE	
+The SWMM 5 computational engine consists of 51 C-code files plus several
+header files. The engine can be compiled either as a Dynamic Link Library
+(DLL) under Windows or as a stand-alone console application under both
+Windows and Linux, depending on which of the #define DLL and #define CLE
 declarations at the top of swmm5.c is commented out.
 
-#  The following header files contain definitions that are used throughout the	
-code and should be consulted if the meaning of a variable, a data structure,		
+#  The following header files contain definitions that are used throughout the
+code and should be consulted if the meaning of a variable, a data structure,
 or a constant is unclear:	
 
 enums.h       defines various enumerated (symbolic) constants.	
