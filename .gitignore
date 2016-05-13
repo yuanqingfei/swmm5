@@ -1,0 +1,8 @@
+javafiles/bin/
+javafiles/*.java
+sample/parkinglot_output
+sample/*.txt
+swig/swmm5_wrap.c
+swig/swmm5_wrap.o
+src/*.o
+src/swmm5

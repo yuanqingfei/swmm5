@@ -19,12 +19,15 @@ compiler directives at the top of the file read as follows:
        
 ## Under src:
 
-      make    
-      make clean
-	  ./swmm5 ../sample/parkinglot.inp ../sample/report.txt ../sample/parkinglot.opt	
-or    ./swmm5 ../sample/parkinglot.inp ../sample/report.txt	  	  
-   
-   
+      make   
+	  swmm5 ../sample/parkinglot.inp ../sample/report.txt ../sample/parkinglot.opt    	
+	  or swmm5 ../sample/parkinglot.inp ../sample/report.txt	  	  
+	   
+## clean
+
+	make clean
+	
+	
 
 A Roadmap to the SWMM 5 Engine Source Code
 ---------------------------------------------------------------------
